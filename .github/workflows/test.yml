@@ -17,6 +17,30 @@ jobs:
         run: |
           sudo xcode-select -switch /Applications/Xcode_12.4.app
 
+      - name: iOS Build 
+        run: |
+          xcodebuild \
+            -project AmplitudeCore.xcodeproj \
+            -scheme AmplitudeCore \
+            -sdk iphonesimulator \
+            -destination 'platform=iOS Simulator,name=iPhone 12,OS=14.4'
+
+      - name: macOS Build 
+        run: |
+          xcodebuild \
+            -project AmplitudeCore.xcodeproj \
+            -scheme AmplitudeCore \
+            -sdk macosx \
+            -destination 'platform=macosx' \
+
+      - name: tvOS Build 
+        run: |
+          xcodebuild \
+            -project AmplitudeCore.xcodeproj \
+            -scheme AmplitudeCore \
+            -sdk appletvsimulator \
+            -destination 'platform=tvOS Simulator,name=Apple TV' \
+
       - name: iOS Tests
         run: |
           xcodebuild test \
