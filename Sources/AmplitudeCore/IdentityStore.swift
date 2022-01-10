@@ -9,10 +9,6 @@ import Foundation
 
 internal let ID_OP_SET = "$set"
 internal let ID_OP_UNSET = "$unset"
-internal let ID_OP_SET_ONCE = "$setOnce"
-internal let ID_OP_ADD = "$add"
-internal let ID_OP_APPEND = "$append"
-internal let ID_OP_PREPEND = "$prepend"
 internal let ID_OP_CLEAR_ALL = "$clearAll"
 
 @objc public class Identity: NSObject {
@@ -140,55 +136,6 @@ internal let ID_OP_CLEAR_ALL = "$clearAll"
                 self.userProperties.addEntries(from: properties)
             case ID_OP_UNSET:
                 self.userProperties.removeObjects(forKeys: Array(properties.keys))
-            case ID_OP_SET_ONCE:
-                properties.forEach { (key: AnyHashable, value: Any) in
-                    guard let key = key as? String else {
-                        return
-                    }
-                    if let _ = self.userProperties[key] {
-                        return
-                    } else {
-                        self.userProperties[key] = value
-                    }
-                }
-            case ID_OP_ADD:
-                properties.forEach { (key: AnyHashable, value: Any) in
-                    guard let key = key as? String else {
-                        return
-                    }
-                    guard let value = value as? NSNumber else {
-                        return
-                    }
-                    guard let currentValue = self.userProperties[key] as? NSNumber else {
-                        self.userProperties[key] = value
-                        return
-                    }
-                    self.userProperties[key] = NSNumber(value: currentValue.doubleValue + value.doubleValue)
-                }
-            case ID_OP_APPEND:
-                properties.forEach { (key: AnyHashable, value: Any) in
-                    guard let key = key as? String else {
-                        return
-                    }
-                    guard let value = value as? [Any] else {
-                        return
-                    }
-                    var currentValue: [Any] = self.userProperties[key] as? [Any] ?? []
-                    currentValue.append(contentsOf: value)
-                    self.userProperties[key] = currentValue
-                }
-            case ID_OP_PREPEND:
-                properties.forEach { (key: AnyHashable, value: Any) in
-                    guard let key = key as? String else {
-                        return
-                    }
-                    guard var value = value as? [Any] else {
-                        return
-                    }
-                    let currentValue = self.userProperties[key] as? [Any] ?? []
-                    value.append(contentsOf: currentValue)
-                    self.userProperties[key] = value
-                }
             case ID_OP_CLEAR_ALL:
                 self.userProperties.removeAllObjects()
             default: break
