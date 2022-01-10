@@ -13,6 +13,7 @@
 		2001756927728E16001C341D /* IdentityStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2001756827728E16001C341D /* IdentityStore.swift */; };
 		2001756F2773B679001C341D /* AnalyticsConnectorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2001756E2773B679001C341D /* AnalyticsConnectorTests.swift */; };
 		200175752773D888001C341D /* IdentityStoreTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 200175742773D888001C341D /* IdentityStoreTests.swift */; };
+		20C9FAB1278CB1C000A4D530 /* ObjectiveCTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 20C9FAB0278CB1C000A4D530 /* ObjectiveCTests.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -27,6 +28,8 @@
 		20866C9A2771454C003D1705 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		20866C9B27714900003D1705 /* AmplitudeCore.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AmplitudeCore.h; sourceTree = "<group>"; };
 		20866C9C2771491B003D1705 /* AmplitudeCore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AmplitudeCore.swift; sourceTree = "<group>"; };
+		20C9FAAF278CB1C000A4D530 /* AmplitudeCoreTests-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "AmplitudeCoreTests-Bridging-Header.h"; sourceTree = "<group>"; };
+		20C9FAB0278CB1C000A4D530 /* ObjectiveCTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ObjectiveCTests.m; sourceTree = "<group>"; };
 		E9945CC325797C030066398B /* Package.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Package.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -55,6 +58,8 @@
 				2001755C27728AD9001C341D /* AmplitudeCoreTests.swift */,
 				2001756E2773B679001C341D /* AnalyticsConnectorTests.swift */,
 				200175742773D888001C341D /* IdentityStoreTests.swift */,
+				20C9FAB0278CB1C000A4D530 /* ObjectiveCTests.m */,
+				20C9FAAF278CB1C000A4D530 /* AmplitudeCoreTests-Bridging-Header.h */,
 			);
 			path = AmplitudeCoreTests;
 			sourceTree = "<group>";
@@ -170,6 +175,11 @@
 			attributes = {
 				LastSwiftUpdateCheck = 1240;
 				LastUpgradeCheck = 1220;
+				TargetAttributes = {
+					200174AD277156AB001C341D = {
+						LastSwiftMigration = 1240;
+					};
+				};
 			};
 			buildConfigurationList = E914960925796DA800C64B38 /* Build configuration list for PBXProject "AmplitudeCore" */;
 			compatibilityVersion = "Xcode 9.3";
@@ -223,6 +233,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				2001756F2773B679001C341D /* AnalyticsConnectorTests.swift in Sources */,
+				20C9FAB1278CB1C000A4D530 /* ObjectiveCTests.m in Sources */,
 				200175752773D888001C341D /* IdentityStoreTests.swift in Sources */,
 				2001755D27728AD9001C341D /* AmplitudeCoreTests.swift in Sources */,
 			);
@@ -312,7 +323,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.amplitude.AmplitudeCoreTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SUPPORTED_PLATFORMS = "iphonesimulator iphoneos macosx appletvos appletvsimulator";
-				SWIFT_OBJC_BRIDGING_HEADER = "";
+				SWIFT_OBJC_BRIDGING_HEADER = "Tests/AmplitudeCoreTests/AmplitudeCoreTests-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2,3,6";
@@ -338,7 +349,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.amplitude.AmplitudeCoreTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SUPPORTED_PLATFORMS = "iphonesimulator iphoneos macosx appletvos appletvsimulator";
-				SWIFT_OBJC_BRIDGING_HEADER = "";
+				SWIFT_OBJC_BRIDGING_HEADER = "Tests/AmplitudeCoreTests/AmplitudeCoreTests-Bridging-Header.h";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2,3,6";
 				TVOS_DEPLOYMENT_TARGET = 9.0;
