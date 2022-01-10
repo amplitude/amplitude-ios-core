@@ -1,6 +1,6 @@
-# experiment-ios-interop
+# experiment-ios-core
 
-Interoperability package for Amplitude Analytics and Experiment SDKs.
+Core interoperability package for Amplitude Analytics and Experiment SDKs.
 
 ## Getting Started
 

@@ -24,7 +24,7 @@
 		2001756827728E16001C341D /* IdentityStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IdentityStore.swift; sourceTree = "<group>"; };
 		2001756E2773B679001C341D /* AnalyticsConnectorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnalyticsConnectorTests.swift; sourceTree = "<group>"; };
 		200175742773D888001C341D /* IdentityStoreTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IdentityStoreTests.swift; sourceTree = "<group>"; };
-		20866C9A2771454C003D1705 /* info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = info.plist; sourceTree = "<group>"; };
+		20866C9A2771454C003D1705 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		20866C9B27714900003D1705 /* AmplitudeCore.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AmplitudeCore.h; sourceTree = "<group>"; };
 		20866C9C2771491B003D1705 /* AmplitudeCore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AmplitudeCore.swift; sourceTree = "<group>"; };
 		E9945CC325797C030066398B /* Package.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Package.swift; sourceTree = "<group>"; };
@@ -69,7 +69,7 @@
 		20866C99277144F1003D1705 /* AmplitudeCore */ = {
 			isa = PBXGroup;
 			children = (
-				20866C9A2771454C003D1705 /* info.plist */,
+				20866C9A2771454C003D1705 /* Info.plist */,
 				20866C9B27714900003D1705 /* AmplitudeCore.h */,
 				20866C9C2771491B003D1705 /* AmplitudeCore.swift */,
 				2001756227728E0A001C341D /* AnalyticsConnector.swift */,
