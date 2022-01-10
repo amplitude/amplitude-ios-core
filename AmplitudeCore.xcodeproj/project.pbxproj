@@ -14,6 +14,8 @@
 		2001756F2773B679001C341D /* AnalyticsConnectorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2001756E2773B679001C341D /* AnalyticsConnectorTests.swift */; };
 		200175752773D888001C341D /* IdentityStoreTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 200175742773D888001C341D /* IdentityStoreTests.swift */; };
 		20C9FAB1278CB1C000A4D530 /* ObjectiveCTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 20C9FAB0278CB1C000A4D530 /* ObjectiveCTests.m */; };
+		20C9FAC9278CB9C100A4D530 /* Test.m in Sources */ = {isa = PBXBuildFile; fileRef = 20C9FAC8278CB9C100A4D530 /* Test.m */; };
+		20C9FACD278CBA2300A4D530 /* AmplitudeCore-Bridging-Header.h in Headers */ = {isa = PBXBuildFile; fileRef = 20C9FACC278CBA2300A4D530 /* AmplitudeCore-Bridging-Header.h */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,6 +32,8 @@
 		20866C9C2771491B003D1705 /* AmplitudeCore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AmplitudeCore.swift; sourceTree = "<group>"; };
 		20C9FAAF278CB1C000A4D530 /* AmplitudeCoreTests-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "AmplitudeCoreTests-Bridging-Header.h"; sourceTree = "<group>"; };
 		20C9FAB0278CB1C000A4D530 /* ObjectiveCTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ObjectiveCTests.m; sourceTree = "<group>"; };
+		20C9FAC8278CB9C100A4D530 /* Test.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Test.m; sourceTree = "<group>"; };
+		20C9FACC278CBA2300A4D530 /* AmplitudeCore-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "AmplitudeCore-Bridging-Header.h"; sourceTree = "<group>"; };
 		E9945CC325797C030066398B /* Package.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Package.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -79,6 +83,8 @@
 				20866C9C2771491B003D1705 /* AmplitudeCore.swift */,
 				2001756227728E0A001C341D /* AnalyticsConnector.swift */,
 				2001756827728E16001C341D /* IdentityStore.swift */,
+				20C9FAC8278CB9C100A4D530 /* Test.m */,
+				20C9FACC278CBA2300A4D530 /* AmplitudeCore-Bridging-Header.h */,
 			);
 			path = AmplitudeCore;
 			sourceTree = "<group>";
@@ -126,6 +132,7 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				20C9FACD278CBA2300A4D530 /* AmplitudeCore-Bridging-Header.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -176,6 +183,9 @@
 				LastSwiftUpdateCheck = 1240;
 				LastUpgradeCheck = 1220;
 				TargetAttributes = {
+					2001748C2771569E001C341D = {
+						LastSwiftMigration = 1240;
+					};
 					200174AD277156AB001C341D = {
 						LastSwiftMigration = 1240;
 					};
@@ -223,6 +233,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				2001756327728E0A001C341D /* AnalyticsConnector.swift in Sources */,
+				20C9FAC9278CB9C100A4D530 /* Test.m in Sources */,
 				2001753427728A4D001C341D /* AmplitudeCore.swift in Sources */,
 				2001756927728E16001C341D /* IdentityStore.swift in Sources */,
 			);

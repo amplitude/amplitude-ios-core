@@ -4,7 +4,7 @@
 import PackageDescription
 
 let package = Package(
-    name: "amplitude-ios-interop",
+    name: "amplitude-ios-core",
     platforms: [
         .iOS(.v10),
         .macOS(.v10_10),
