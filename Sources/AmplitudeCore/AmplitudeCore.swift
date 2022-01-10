@@ -7,7 +7,7 @@
 
 import Foundation
 
-@objc public class AmplitudeCore : NSObject {
+@objc @objcMembers public class AmplitudeCore : NSObject {
     
     private static let instancesLock: DispatchSemaphore = DispatchSemaphore(value: 1)
     private static var instances: [String:AmplitudeCore] = [:]
