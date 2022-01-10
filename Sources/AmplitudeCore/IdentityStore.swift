@@ -110,24 +110,24 @@ internal let ID_OP_CLEAR_ALL = "$clearAll"
         self.identityStore = identityStore
     }
     
-    func setUserId(_ userId: String) -> IdentityStoreEditor {
+    @objc func setUserId(_ userId: String) -> IdentityStoreEditor {
         self.userId = userId
         return self
     }
     
-    func setDeviceId(_ deviceId: String) -> IdentityStoreEditor {
+    @objc func setDeviceId(_ deviceId: String) -> IdentityStoreEditor {
         self.deviceId = deviceId
         return self
     }
     
-    func setUserProperties(_ userProperties: NSDictionary) -> IdentityStoreEditor {
+    @objc func setUserProperties(_ userProperties: NSDictionary) -> IdentityStoreEditor {
         if let userProperties = userProperties.mutableCopy() as? NSMutableDictionary {
             self.userProperties = userProperties
         }
         return self
     }
     
-    func updateUserProperties(_ userPropertyActions: NSDictionary) -> IdentityStoreEditor {
+    @objc func updateUserProperties(_ userPropertyActions: NSDictionary) -> IdentityStoreEditor {
         userPropertyActions.forEach { (action: Any, properties: Any) in
             guard let action = action as? String else {
                 return
@@ -197,7 +197,7 @@ internal let ID_OP_CLEAR_ALL = "$clearAll"
         return self
     }
     
-    func commit() {
+    @objc func commit() {
         let identity = Identity(userId: userId, deviceId: deviceId, userProperties: userProperties)
         self.identityStore.setIdentity(identity)
     }
