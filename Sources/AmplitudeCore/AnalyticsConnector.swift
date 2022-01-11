@@ -54,7 +54,9 @@ import Foundation
         eventReceiverLock.wait()
         defer { eventReceiverLock.signal() }
         guard let eventReceiver = self.eventReceiver else {
-            eventQueue.append(event)
+            if (eventQueue.count < 512) {
+                eventQueue.append(event)
+            }
             return
         }
         eventReceiver(event)
