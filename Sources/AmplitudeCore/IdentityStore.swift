@@ -39,8 +39,8 @@ internal let ID_OP_CLEAR_ALL = "$clearAll"
 }
 
 @objc public protocol IdentityStoreEditor {
-    @objc func setUserId(_ userId: String) -> IdentityStoreEditor
-    @objc func setDeviceId(_ deviceId: String) -> IdentityStoreEditor
+    @objc func setUserId(_ userId: String?) -> IdentityStoreEditor
+    @objc func setDeviceId(_ deviceId: String?) -> IdentityStoreEditor
     @objc func setUserProperties(_ userProperties: NSDictionary) -> IdentityStoreEditor
     @objc func updateUserProperties(_ userPropertyActions: NSDictionary) -> IdentityStoreEditor
     @objc func commit()
@@ -106,12 +106,12 @@ internal let ID_OP_CLEAR_ALL = "$clearAll"
         self.identityStore = identityStore
     }
     
-    @objc func setUserId(_ userId: String) -> IdentityStoreEditor {
+    @objc func setUserId(_ userId: String?) -> IdentityStoreEditor {
         self.userId = userId
         return self
     }
     
-    @objc func setDeviceId(_ deviceId: String) -> IdentityStoreEditor {
+    @objc func setDeviceId(_ deviceId: String?) -> IdentityStoreEditor {
         self.deviceId = deviceId
         return self
     }
